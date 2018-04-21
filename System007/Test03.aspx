@@ -8,9 +8,11 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>请您登陆</title>
+    <title>中国联通电话卡销售管理系统</title>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../dist_select/css/bootstrap-select.css"/>
     <script src="../jquery/1.11.1/jquery.min.js"></script>
+    <script src="../dist_select/js/bootstrap-select.js"></script>
       <style>
         body { padding-top: 100px; }
       </style>
@@ -19,13 +21,21 @@
     <div class="container">
         <div class="center-block" style="width:400px;">
             <header class="l-center">
-                <h3 class="showcase-title">中国移动电话卡销售管理系统</h3>
+                <h3 class="showcase-title">登录账户</h3>
             </header>
         </div>
         <div class="center-block" style="width:400px;">
             <div class="well well-lg">
                 <label for="name">类别</label>
-                <div class="btn-group">
+                <div class="form-group">
+                    <select id="lunchBegins" class="selectpicker" title="请选择部门">
+                        <option>普通员工</option>
+                        <option>部门经理</option>
+                        <option>地推网点经理</option>
+                        <option>总经理</option>
+                    </select>
+                </div>
+                <%--<div class="btn-group">
 	                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span>
                     </button>
 	                    <ul class="dropdown-menu" role="menu">
@@ -34,7 +44,7 @@
 		                     <li><a href="#">地推网点经理</a></li>
 		                     <li><a href="#">总经理</a></li>
 	                    </ul>
-                </div>
+                </div>--%>
                 <div class="form-group">
 		             <label for="name">OA</label> 
                      <input type="text" class="form-control" id="name" placeholder="请输入OA" />
@@ -48,5 +58,25 @@
         </div>
     </div>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+</script>
 </body>
 </html>
