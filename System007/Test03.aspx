@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>中国联通电话卡销售管理系统</title>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../dist_select/css/bootstrap-select.css"/>
+    <link rel="stylesheet" href="../bootstrap/dist_select/css/bootstrap-select.css"/>
     <script src="../jquery/1.11.1/jquery.min.js"></script>
-    <script src="../dist_select/js/bootstrap-select.js"></script>
+    <script src="../bootstrap/dist_select/js/bootstrap-select.js"></script>
       <style>
         body { padding-top: 100px; }
       </style>
